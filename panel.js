@@ -62,6 +62,7 @@ function startMiner() {
   /* call API */
   console.log("sending start")
   fetch("http://localhost:12357/start").then(response => response.json()).then(data => console.log(data));
+
 }
 
 function stopMiner() {

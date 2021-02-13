@@ -13,7 +13,7 @@
   "sidebar_action": {
     "default_icon": "icons/star.png",
     "default_title" : "BlockMedia",
-    "default_panel": "sidebar/panel.html"
+    "default_panel": "panel.html"
   },
 
   "permissions": ["storage", "tabs"],
@@ -21,7 +21,7 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["sidebar/panel.js"]
+      "js": ["panel.js"]
     }
   ],
 

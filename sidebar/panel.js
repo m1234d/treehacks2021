@@ -1,4 +1,4 @@
-var myWindowId;
+// var myWindowId;
 // const contentBox = document.querySelector("#content");
 
 // /*
@@ -37,21 +37,36 @@ var myWindowId;
 //     });
 // }
 
-/*
-Update content when a new tab becomes active.
-*/
-browser.tabs.onActivated.addListener(updateContent);
 
-/*
-Update content when a new page is loaded into a tab.
-*/
-browser.tabs.onUpdated.addListener(updateContent);
 
-/*
-When the sidebar loads, get the ID of its window,
-and update its content.
-*/
-browser.windows.getCurrent({populate: true}).then((windowInfo) => {
-  myWindowId = windowInfo.id;
-  updateContent();
-});
+// /*
+// Update content when a new tab becomes active.
+// */
+// browser.tabs.onActivated.addListener(updateContent);
+
+// /*
+// Update content when a new page is loaded into a tab.
+// */
+// browser.tabs.onUpdated.addListener(updateContent);
+
+// /*
+// When the sidebar loads, get the ID of its window,
+// and update its content.
+// */
+// browser.windows.getCurrent({populate: true}).then((windowInfo) => {
+//   myWindowId = windowInfo.id;
+//   updateContent();
+// });
+
+function startMiner() {
+  /* call API */
+  console.log("fuck me in the ass harder papi")
+}
+
+function stopMiner() {
+  /* call API */
+  console.log("slow down papi")
+}
+document.getElementById("starter").addEventListener("click", startMiner)
+document.getElementById("stopper").addEventListener("click", stopMiner)
+console.log("mothers <3")

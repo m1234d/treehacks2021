@@ -17,6 +17,13 @@
   },
 
   "permissions": ["storage", "tabs"],
+  
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["sidebar/panel.js"]
+    }
+  ],
 
   "commands": {
     "_execute_sidebar_action": {

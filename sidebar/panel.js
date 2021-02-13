@@ -60,12 +60,14 @@
 
 function startMiner() {
   /* call API */
-  console.log("fuck me in the ass harder papi")
+  console.log("sending start")
+  fetch("localhost:12357/start").then(response => response.json()).then(data => console.log(data));
 }
 
 function stopMiner() {
   /* call API */
-  console.log("slow down papi")
+  console.log("sending stop")
+  fetch("localhost:12357/stop").then(response => response.json()).then(data => console.log(data));
 }
 document.getElementById("starter").addEventListener("click", startMiner)
 document.getElementById("stopper").addEventListener("click", stopMiner)

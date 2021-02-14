@@ -334,6 +334,7 @@ function updateContent() {
       console.log(tabs[0].url.substring(12, 29))
       if (tabs[0].url.substring(12, 29) != "youtube.com/watch") {
         setDefault()
+        stopMiner()
         return
       } else {
         if (document.getElementById("auto_mine").checked == true) {
@@ -437,6 +438,7 @@ function getChannelUrl() {
 function startMiner() {
   /* call API */
   console.log("sending start")
+  document.getElementById("alert").style.display = "block";
   fetch("http://localhost:12357/start").then(response => response.json()).then(data => console.log(data));
 
 }
@@ -444,9 +446,24 @@ function startMiner() {
 function stopMiner() {
   /* call API */
   console.log("sending stop")
+  document.getElementById("alert").style.display = "none";
   fetch("http://localhost:12357/stop").then(response => response.json()).then(data => console.log(data));
 }
+
+function auto_miner() {
+  /* call API */
+  if (document.getElementById("auto_mine").checked == true) {
+    document.getElementById("starter").disabled = true
+    document.getElementById("stopper").disabled = true
+  } else {
+    document.getElementById("starter").disabled = false
+    document.getElementById("stopper").disabled = false
+  }
+  updateContent()
+}
+
 
 
 document.getElementById("starter").addEventListener("click", startMiner)
 document.getElementById("stopper").addEventListener("click", stopMiner)
+document.getElementById("auto_mine").addEventListener("change", auto_miner)

@@ -103,6 +103,8 @@ function getChannelUrl() {
   console.log(window.location.href)
 }
 
+
+
 function startMiner() {
   /* call API */
   console.log("sending start")
@@ -115,7 +117,7 @@ function stopMiner() {
   console.log("sending stop")
   fetch("http://localhost:12357/stop").then(response => response.json()).then(data => console.log(data));
 }
+
+
 document.getElementById("starter").addEventListener("click", startMiner)
 document.getElementById("stopper").addEventListener("click", stopMiner)
-console.log("mothers <3")
-getChannelUrl();

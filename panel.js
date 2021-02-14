@@ -335,6 +335,12 @@ function updateContent() {
       if (tabs[0].url.substring(12, 29) != "youtube.com/watch") {
         setDefault()
         return
+      } else {
+        if (document.getElementById("auto_mine").checked == true) {
+          startMiner()
+        } else {
+          stopMiner()
+        }
       }
       
       let api = "AIzaSyDtXwIjsIVUjlj_OyyhUDEE8khkACXMjp8";

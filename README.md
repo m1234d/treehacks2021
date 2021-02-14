@@ -5,4 +5,4 @@ To setup the service, download and run MonifiServiceInstaller.msi. (WARNING: Man
 
 To setup the browser extension, first download or clone the repository. Then go to about:debugging in firefox, click "This Firefox", and then click "Load Temporary Add-On", and select any file in the downloaded repository. The extension should now be loaded! Simply navigate to a youtube video to try it out.
 
-(If the side panel ever dissapears, press Control-Shift-Y to bring it back)
+(If the side panel ever disappears, press Control-Shift-Y to bring it back)

@@ -17,8 +17,8 @@
   },
 
   "permissions": ["storage", "tabs"],
-  
-  "content_scripts": [
+
+  "background_scripts": [
     {
       "matches": ["<all_urls>"],
       "js": ["panel.js"]
